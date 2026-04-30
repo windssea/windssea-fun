@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { MORSE_TREE, MorseNode } from '../data/morseCode';
+import { MORSE_TREE } from '../data/morseCode';
+import type { MorseNode } from '../data/morseCode';
 
 interface Props {
   path: string;
