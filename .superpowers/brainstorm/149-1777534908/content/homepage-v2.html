@@ -1,0 +1,97 @@
+<h2>首页图标风格</h2>
+<p class="subtitle">iOS 桌面布局，4列图标网格。选一个图标设计方向。</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="icon-glow" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:16px;min-height:180px;border-radius:6px;font-family:'Courier New',monospace;">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:280px;margin:0 auto;">
+        <!-- Row 1 -->
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#0a2a0a;border:1.5px solid #00ff41;border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 10px #00ff4155;font-size:22px;">📡</div>
+          <span style="color:#ccc;font-size:9px;text-align:center;">Morse</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#111;border:1px dashed #333;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;">+</div>
+          <span style="color:#444;font-size:9px;">Soon</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#111;border:1px dashed #333;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;">+</div>
+          <span style="color:#444;font-size:9px;">Soon</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#111;border:1px dashed #333;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;">+</div>
+          <span style="color:#444;font-size:9px;">Soon</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A · 终端绿发光图标</h3>
+      <p>深色背景，绿色边框+外发光，已有功能高亮，未来功能虚线占位。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="icon-solid" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:16px;min-height:180px;border-radius:6px;font-family:'Courier New',monospace;">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:280px;margin:0 auto;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:linear-gradient(135deg,#00ff41,#007a1f);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 12px #00ff4133;">📡</div>
+          <span style="color:#ccc;font-size:9px;">Morse</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#1a1a1a;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#444;">?</div>
+          <span style="color:#444;font-size:9px;">Soon</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#1a1a1a;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#444;">?</div>
+          <span style="color:#444;font-size:9px;">Soon</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#1a1a1a;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#444;">?</div>
+          <span style="color:#444;font-size:9px;">Soon</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B · 渐变实色图标</h3>
+      <p>绿色渐变填充，类 iOS App 图标质感，未来功能暗色占位。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="icon-minimal" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:16px;min-height:180px;border-radius:6px;font-family:'Courier New',monospace;">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:280px;margin:0 auto;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#0d1117;border:1px solid #00ff41;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+            <div style="display:flex;gap:3px;align-items:center;">
+              <span style="width:5px;height:5px;border-radius:50%;background:#00ff41;display:inline-block;"></span>
+              <span style="width:14px;height:5px;border-radius:3px;background:#00ff41;display:inline-block;"></span>
+            </div>
+            <div style="display:flex;gap:3px;align-items:center;">
+              <span style="width:14px;height:5px;border-radius:3px;background:#00ff41;display:inline-block;"></span>
+              <span style="width:14px;height:5px;border-radius:3px;background:#00ff41;display:inline-block;"></span>
+            </div>
+          </div>
+          <span style="color:#00ff41;font-size:9px;">Morse</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#0d1117;border:1px dashed #2a2a2a;border-radius:14px;"></div>
+          <span style="color:#333;font-size:9px;">Soon</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#0d1117;border:1px dashed #2a2a2a;border-radius:14px;"></div>
+          <span style="color:#333;font-size:9px;">Soon</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:52px;height:52px;background:#0d1117;border:1px dashed #2a2a2a;border-radius:14px;"></div>
+          <span style="color:#333;font-size:9px;">Soon</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C · 摩斯符号图标</h3>
+      <p>图标内直接用点划符号构成图案，纯终端极简，无 emoji，最有特色。</p>
+    </div>
+  </div>
+
+</div>

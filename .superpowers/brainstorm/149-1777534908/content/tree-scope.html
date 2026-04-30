@@ -1,0 +1,123 @@
+<h2>决策树展示范围</h2>
+<p class="subtitle">摩斯码完整树有 4 层，手机屏幕有限。选择展示多少层。</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="full4" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:10px;min-height:200px;border-radius:6px;font-family:'Courier New',monospace;overflow:hidden;">
+      <div style="color:#555;font-size:8px;text-align:center;margin-bottom:6px;">完整4层 · 26字母全覆盖</div>
+      <svg viewBox="0 0 260 160" style="width:100%;height:140px;">
+        <!-- L0 root -->
+        <circle cx="130" cy="12" r="8" fill="#0a2a0a" stroke="#00ff41" stroke-width="1.5"/>
+        <text x="130" y="16" text-anchor="middle" fill="#00ff41" font-size="7">●</text>
+        <!-- L1 lines -->
+        <line x1="130" y1="20" x2="65" y2="44" stroke="#1a3a1a" stroke-width="1"/>
+        <line x1="130" y1="20" x2="195" y2="44" stroke="#00ff41" stroke-width="1.5" filter="url(#glow)"/>
+        <!-- L1 nodes -->
+        <circle cx="65" cy="52" r="7" fill="#111" stroke="#333" stroke-width="1"/>
+        <text x="65" y="56" text-anchor="middle" fill="#444" font-size="6">E</text>
+        <circle cx="195" cy="52" r="7" fill="#0a2a0a" stroke="#00ff41" stroke-width="1.5"/>
+        <text x="195" y="56" text-anchor="middle" fill="#00ff41" font-size="6" font-weight="bold">T</text>
+        <!-- L2 lines from E -->
+        <line x1="65" y1="59" x2="33" y2="80" stroke="#1a3a1a" stroke-width="1"/>
+        <line x1="65" y1="59" x2="97" y2="80" stroke="#1a3a1a" stroke-width="1"/>
+        <!-- L2 lines from T -->
+        <line x1="195" y1="59" x2="163" y2="80" stroke="#1a3a1a" stroke-width="1"/>
+        <line x1="195" y1="59" x2="227" y2="80" stroke="#00ff41" stroke-width="1.5"/>
+        <!-- L2 nodes -->
+        <circle cx="33" cy="87" r="6" fill="#111" stroke="#333" stroke-width="1"/>
+        <text x="33" y="91" text-anchor="middle" fill="#444" font-size="5.5">I</text>
+        <circle cx="97" cy="87" r="6" fill="#111" stroke="#333" stroke-width="1"/>
+        <text x="97" y="91" text-anchor="middle" fill="#444" font-size="5.5">A</text>
+        <circle cx="163" cy="87" r="6" fill="#111" stroke="#333" stroke-width="1"/>
+        <text x="163" y="91" text-anchor="middle" fill="#444" font-size="5.5">N</text>
+        <circle cx="227" cy="87" r="6" fill="#0a2a0a" stroke="#00ff41" stroke-width="1.5"/>
+        <text x="227" y="91" text-anchor="middle" fill="#00ff41" font-size="5.5" font-weight="bold">M</text>
+        <!-- L3 lines (partial) -->
+        <line x1="33" y1="93" x2="17" y2="110" stroke="#1a3a1a" stroke-width="0.8"/>
+        <line x1="33" y1="93" x2="49" y2="110" stroke="#1a3a1a" stroke-width="0.8"/>
+        <line x1="97" y1="93" x2="81" y2="110" stroke="#1a3a1a" stroke-width="0.8"/>
+        <line x1="97" y1="93" x2="113" y2="110" stroke="#1a3a1a" stroke-width="0.8"/>
+        <line x1="163" y1="93" x2="147" y2="110" stroke="#1a3a1a" stroke-width="0.8"/>
+        <line x1="163" y1="93" x2="179" y2="110" stroke="#1a3a1a" stroke-width="0.8"/>
+        <line x1="227" y1="93" x2="211" y2="110" stroke="#1a3a1a" stroke-width="0.8"/>
+        <line x1="227" y1="93" x2="243" y2="110" stroke="#00ff41" stroke-width="1.2"/>
+        <!-- L3 nodes -->
+        <circle cx="17" cy="116" r="5" fill="#111" stroke="#2a2a2a" stroke-width="0.8"/>
+        <text x="17" y="120" text-anchor="middle" fill="#333" font-size="5">S</text>
+        <circle cx="49" cy="116" r="5" fill="#111" stroke="#2a2a2a" stroke-width="0.8"/>
+        <text x="49" y="120" text-anchor="middle" fill="#333" font-size="5">U</text>
+        <circle cx="81" cy="116" r="5" fill="#111" stroke="#2a2a2a" stroke-width="0.8"/>
+        <text x="81" y="120" text-anchor="middle" fill="#333" font-size="5">R</text>
+        <circle cx="113" cy="116" r="5" fill="#111" stroke="#2a2a2a" stroke-width="0.8"/>
+        <text x="113" y="120" text-anchor="middle" fill="#333" font-size="5">W</text>
+        <circle cx="147" cy="116" r="5" fill="#111" stroke="#2a2a2a" stroke-width="0.8"/>
+        <text x="147" y="120" text-anchor="middle" fill="#333" font-size="5">D</text>
+        <circle cx="179" cy="116" r="5" fill="#111" stroke="#2a2a2a" stroke-width="0.8"/>
+        <text x="179" y="120" text-anchor="middle" fill="#333" font-size="5">K</text>
+        <circle cx="211" cy="116" r="5" fill="#111" stroke="#2a2a2a" stroke-width="0.8"/>
+        <text x="211" y="120" text-anchor="middle" fill="#333" font-size="5">G</text>
+        <circle cx="243" cy="116" r="5" fill="#0a2a0a" stroke="#00ff41" stroke-width="1.2" filter="url(#glow)"/>
+        <text x="243" y="120" text-anchor="middle" fill="#00ff41" font-size="5" font-weight="bold">O</text>
+        <!-- L4 dots (just hints) -->
+        <text x="130" y="148" text-anchor="middle" fill="#1a3a1a" font-size="8">· · · · · · · · · · · · · · · ·</text>
+        <text x="130" y="158" text-anchor="middle" fill="#1a3a1a" font-size="7">第4层（C F H J L P Q V X Y Z）</text>
+        <defs>
+          <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3>A · 完整4层（可缩放）</h3>
+      <p>全部26字母，支持双指缩放/平移。初始显示全貌，输入时自动聚焦高亮路径。信息最全但密集。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="dynamic3" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:10px;min-height:200px;border-radius:6px;font-family:'Courier New',monospace;">
+      <div style="color:#555;font-size:8px;text-align:center;margin-bottom:6px;">动态3层 · 随输入自动展开</div>
+      <svg viewBox="0 0 260 150" style="width:100%;height:130px;">
+        <defs>
+          <filter id="glow2"><feGaussianBlur stdDeviation="2.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <!-- Root -->
+        <circle cx="130" cy="15" r="10" fill="#0a2a0a" stroke="#00ff41" stroke-width="1.5" filter="url(#glow2)"/>
+        <text x="130" y="19" text-anchor="middle" fill="#00ff41" font-size="8">●</text>
+        <!-- L1 -->
+        <line x1="130" y1="25" x2="65" y2="52" stroke="#1a3a1a" stroke-width="1.2"/>
+        <line x1="130" y1="25" x2="195" y2="52" stroke="#00ff41" stroke-width="2" filter="url(#glow2)"/>
+        <circle cx="65" cy="62" r="9" fill="#111" stroke="#333" stroke-width="1"/>
+        <text x="65" y="66" text-anchor="middle" fill="#444" font-size="8">E</text>
+        <circle cx="195" cy="62" r="9" fill="#0a2a0a" stroke="#00ff41" stroke-width="2" filter="url(#glow2)"/>
+        <text x="195" y="66" text-anchor="middle" fill="#00ff41" font-size="8" font-weight="bold">T</text>
+        <!-- L2 from T only (others faded) -->
+        <line x1="65" y1="71" x2="33" y2="98" stroke="#111" stroke-width="0.8" stroke-dasharray="3,3"/>
+        <line x1="65" y1="71" x2="97" y2="98" stroke="#111" stroke-width="0.8" stroke-dasharray="3,3"/>
+        <line x1="195" y1="71" x2="155" y2="98" stroke="#1a3a1a" stroke-width="1.2"/>
+        <line x1="195" y1="71" x2="235" y2="98" stroke="#00ff41" stroke-width="2" filter="url(#glow2)"/>
+        <!-- L2 nodes -->
+        <circle cx="33" cy="106" r="7" fill="#0d1117" stroke="#1a2a1a" stroke-width="0.8"/>
+        <text x="33" y="110" text-anchor="middle" fill="#1a3a1a" font-size="7">I</text>
+        <circle cx="97" cy="106" r="7" fill="#0d1117" stroke="#1a2a1a" stroke-width="0.8"/>
+        <text x="97" y="110" text-anchor="middle" fill="#1a3a1a" font-size="7">A</text>
+        <circle cx="155" cy="106" r="9" fill="#111" stroke="#333" stroke-width="1.2"/>
+        <text x="155" y="110" text-anchor="middle" fill="#444" font-size="8">N</text>
+        <circle cx="235" cy="106" r="9" fill="#0a2a0a" stroke="#00ff41" stroke-width="2" filter="url(#glow2)"/>
+        <text x="235" y="110" text-anchor="middle" fill="#00ff41" font-size="8" font-weight="bold">M</text>
+        <!-- L3 hint from M -->
+        <line x1="235" y1="115" x2="215" y2="135" stroke="#1a3a1a" stroke-width="1"/>
+        <line x1="235" y1="115" x2="250" y2="135" stroke="#1a3a1a" stroke-width="1"/>
+        <circle cx="215" cy="140" r="7" fill="#111" stroke="#1a3a1a" stroke-width="1"/>
+        <text x="215" y="144" text-anchor="middle" fill="#2a5a2a" font-size="7">G</text>
+        <circle cx="250" cy="140" r="7" fill="#111" stroke="#1a3a1a" stroke-width="1"/>
+        <text x="250" y="144" text-anchor="middle" fill="#2a5a2a" font-size="7">O</text>
+        <text x="80" y="144" text-anchor="middle" fill="#1a3a1a" font-size="7">非当前路径节点淡出</text>
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3>B · 动态聚焦（推荐）</h3>
+      <p>始终显示3层，非当前路径节点淡出，当前路径高亮+发光。输入时树自动聚焦，清晰不拥挤。</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,78 @@
+<h2>主页布局方案</h2>
+<p class="subtitle">终端绿风格，移动端首页作为功能聚合入口。选一个布局方向。</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="grid" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:12px;min-height:160px;border-radius:6px;font-family:'Courier New',monospace;">
+      <div style="color:#00ff41;font-size:10px;letter-spacing:2px;margin-bottom:8px;opacity:0.6;">WINDSSEA.FUN</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+        <div style="background:#0a2a0a;border:1px solid #00ff4133;border-radius:8px;padding:10px;text-align:center;">
+          <div style="font-size:20px;">📡</div>
+          <div style="color:#00ff41;font-size:10px;margin-top:4px;">MORSE</div>
+        </div>
+        <div style="background:#111;border:1px dashed #333;border-radius:8px;padding:10px;text-align:center;">
+          <div style="font-size:20px;opacity:0.3;">+</div>
+          <div style="color:#333;font-size:10px;margin-top:4px;">COMING</div>
+        </div>
+        <div style="background:#111;border:1px dashed #333;border-radius:8px;padding:10px;text-align:center;">
+          <div style="font-size:20px;opacity:0.3;">+</div>
+          <div style="color:#333;font-size:10px;margin-top:4px;">COMING</div>
+        </div>
+        <div style="background:#111;border:1px dashed #333;border-radius:8px;padding:10px;text-align:center;">
+          <div style="font-size:20px;opacity:0.3;">+</div>
+          <div style="color:#333;font-size:10px;margin-top:4px;">COMING</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A · 图标网格</h3>
+      <p>2×2 图标卡片，类 iOS 桌面。扩展性好，新功能直接加格子。简洁直观。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="list" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:12px;min-height:160px;border-radius:6px;font-family:'Courier New',monospace;">
+      <div style="color:#00ff41;font-size:10px;letter-spacing:2px;margin-bottom:10px;opacity:0.6;">// WINDSSEA.FUN</div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <div style="background:#0a2a0a;border-left:3px solid #00ff41;padding:8px 10px;border-radius:0 6px 6px 0;display:flex;align-items:center;gap:8px;">
+          <span style="color:#00ff41;font-size:14px;">📡</span>
+          <div>
+            <div style="color:#00ff41;font-size:11px;font-weight:bold;">MORSE TRAINER</div>
+            <div style="color:#555;font-size:9px;">摩斯密码训练机</div>
+          </div>
+          <span style="color:#00ff41;margin-left:auto;font-size:12px;">›</span>
+        </div>
+        <div style="background:#111;border-left:3px solid #333;padding:8px 10px;border-radius:0 6px 6px 0;display:flex;align-items:center;gap:8px;opacity:0.4;">
+          <span style="font-size:14px;">⬡</span>
+          <div style="color:#444;font-size:11px;">??? · 敬请期待</div>
+        </div>
+        <div style="background:#111;border-left:3px solid #333;padding:8px 10px;border-radius:0 6px 6px 0;display:flex;align-items:center;gap:8px;opacity:0.4;">
+          <span style="font-size:14px;">⬡</span>
+          <div style="color:#444;font-size:11px;">??? · 敬请期待</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B · 终端列表</h3>
+      <p>竖向列表，左侧彩色边框区分状态，有名称和副标题。终端感强，适合功能多时。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="hero" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:12px;min-height:160px;border-radius:6px;font-family:'Courier New',monospace;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+      <div style="color:#00ff41;font-size:9px;letter-spacing:3px;opacity:0.5;margin-bottom:12px;">WINDSSEA.FUN</div>
+      <div style="color:#00ff41;font-size:28px;font-weight:bold;letter-spacing:6px;text-shadow:0 0 10px #00ff41;">· — · ·</div>
+      <div style="color:#555;font-size:9px;margin:6px 0 12px;">正在输入...</div>
+      <div style="display:flex;gap:8px;">
+        <div style="background:#0a2a0a;border:1px solid #00ff4155;border-radius:20px;padding:5px 12px;color:#00ff41;font-size:9px;">MORSE</div>
+        <div style="background:#111;border:1px solid #333;border-radius:20px;padding:5px 12px;color:#444;font-size:9px;">MORE</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C · 大标题 + 胶囊导航</h3>
+      <p>顶部展示当前摩斯输入动画作为视觉焦点，底部胶囊按钮切换功能。沉浸感强。</p>
+    </div>
+  </div>
+
+</div>
