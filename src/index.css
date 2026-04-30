@@ -1,6 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-terminal-bg: #0d1117;
+  --color-terminal-green: #00ff41;
+  --color-terminal-dim: #0a2a0a;
+  --color-terminal-gray: #2a2a2a;
+  --color-terminal-dark: #111;
+  --color-terminal-text: #ccc;
+  --color-terminal-inactive: #333;
+  
+  --font-mono: "Courier New", Courier, monospace;
+  
+  --radius-icon: 14px;
+  --radius-card: 12px;
+}
 
 @layer base {
   body {
@@ -8,18 +21,20 @@
   }
 }
 
-.glow {
+@utility glow {
   box-shadow: 0 0 12px rgba(0, 255, 65, 0.33);
 }
 
-.glow-text {
+@utility glow-text {
   text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
 }
 
-.terminal-border {
-  @apply border border-terminal-gray;
-}
+@layer components {
+  .terminal-border {
+    @apply border border-terminal-gray;
+  }
 
-.active-border {
-  @apply border-1.5 border-terminal-green glow;
+  .active-border {
+    @apply border-[1.5px] border-terminal-green glow;
+  }
 }
