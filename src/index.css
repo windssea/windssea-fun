@@ -1,40 +1,100 @@
 @import "tailwindcss";
 
 @theme {
-  --color-terminal-bg: #0d1117;
-  --color-terminal-green: #00ff41;
-  --color-terminal-dim: #0a2a0a;
-  --color-terminal-gray: #2a2a2a;
-  --color-terminal-dark: #111;
-  --color-terminal-text: #ccc;
-  --color-terminal-inactive: #333;
+  /* Premium Anodized Aluminum & Cool Slate Neutral Theme Colors (Teenage Engineering inspired metallic theme) */
+  --color-terminal-bg: #e8ecf1;       /* Cool sand-blasted silver-aluminum background */
+  --color-terminal-green: #2c4b5e;    /* Deep elegant surgical steel / anodized steel-blue */
+  --color-terminal-dim: #d0d9e2;      /* Cool Muted Zinc Gray */
+  --color-terminal-gray: #bac6d3;     /* Satin Chrome Border Gray */
+  --color-terminal-dark: #f3f6f9;     /* Brushed White-Steel Sheet */
+  --color-terminal-text: #1f2d3d;     /* Cool Deep Titanium Charcoal Text */
+  --color-terminal-inactive: #5a6d80; /* Cool Sand-Blasted Zinc Gray */
+  --color-terminal-orange: #3b7db0;   /* Cool Anodized Cobalt Accent Blue */
   
-  --font-mono: "Courier New", Courier, monospace;
+  /* Rounded yet refined modern sans fonts for elegant legibility */
+  --font-mono: "Fredoka", "Nunito", system-ui, -apple-system, sans-serif;
+  --font-sans: "Fredoka", "Nunito", system-ui, -apple-system, sans-serif;
   
   --radius-icon: 14px;
-  --radius-card: 12px;
+  --radius-card: 20px;
 }
 
 @layer base {
+  * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
   body {
-    @apply bg-terminal-bg text-terminal-green font-mono select-none overflow-hidden;
+    @apply bg-terminal-bg text-terminal-text font-sans select-none overflow-hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    /* Soft ambient steel-blue reflection */
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(215, 227, 238, 0.6) 0%, transparent 50%),
+      radial-gradient(circle at 85% 85%, rgba(195, 209, 222, 0.5) 0%, transparent 50%);
+  }
+  
+  button, [role="button"], .cursor-pointer {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  .selectable-text, .selectable-text * {
+    -webkit-user-select: text !important;
+    user-select: text !important;
   }
 }
 
+/* Sleek elegant borders and key tactile shadows for a premium instrument feel */
 @utility glow {
-  box-shadow: 0 0 12px rgba(0, 255, 65, 0.33);
+  box-shadow: 0 4px 12px -2px rgba(44, 75, 94, 0.15), 0 2px 6px -1px rgba(44, 75, 94, 0.1);
 }
 
 @utility glow-text {
-  text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
+  text-shadow: 0 1px 2px rgba(44, 75, 94, 0.08);
+}
+
+/* Elegant, slim Teenage Engineering style physical synth-key shadow */
+@utility synth-shadow {
+  box-shadow: 0 3px 0px 0px #bac6d3, 0 6px 12px rgba(0, 0, 0, 0.03);
+}
+
+@utility synth-shadow-active {
+  box-shadow: 0 1px 0px 0px #bac6d3, 0 2px 4px rgba(0, 0, 0, 0.02);
+  transform: translateY(2px);
 }
 
 @layer components {
   .terminal-border {
-    @apply border border-terminal-gray;
+    @apply border border-terminal-gray/60;
   }
 
   .active-border {
-    @apply border-[1.5px] border-terminal-green glow;
+    @apply border-2 border-terminal-green glow;
   }
+}
+
+/* Precise subtle micro-animations instead of loose bouncing */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes pulse-warm {
+  0%, 100% { opacity: 0.95; }
+  50% { opacity: 0.8; }
+}
+
+.float-slow {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.pulse-cozy {
+  animation: pulse-warm 4s ease-in-out infinite;
 }

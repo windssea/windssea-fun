@@ -8,13 +8,13 @@ export default {
     extend: {
       colors: {
         terminal: {
-          bg: '#0d1117',
-          green: '#00ff41',
-          dim: '#0a2a0a',
-          gray: '#2a2a2a',
-          dark: '#111',
-          text: '#ccc',
-          inactive: '#333'
+          bg: '#040609',
+          green: '#00ff66',
+          dim: '#0b2e14',
+          gray: '#4d6b56',
+          dark: '#0a0e0c',
+          text: '#f0fdf4',
+          inactive: '#8eb898'
         }
       },
       fontFamily: {
